@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME</title>
+  <link rel="stylesheet" href="static/styles/containers_style.css">
+  <link rel="stylesheet" href="static/styles/style_main_container.css">
+  <link rel="stylesheet" href="static/styles/navi-bar.css">
+  <link rel="stylesheet" href="static/styles/krepselio.css">
+  <script src="static/java.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body>
+
+
+  <div class="navi-bar">
+    <!-- cia bus logo zemiau-->
+    <a href="static/images/Kebabai/logotip-removebg-preview.png"></a>
+    <div class="drop">
+      <button class="navi-btn">&#9776</button>
+      <div class="navi-list">
+        <a href="index.html">Meniu</a>
+        <a id="section1" href="static/krepselis.html">Kontaktai</a>
+        <a href="static/Apie.html">Apie mus</a>
+        
+      </div>
+    </div>
+  </div>
+
+  
+  <h3 class="meniui">1771 Kebabai</h3>
+  <div class="main-container">
+
+    <div class="left-bar">
+      <div class="left-menu">
+      
+      <h5 class="he5">Jūsų užsakymas:</h5>
+       <div id="cart"></div>
+        <div>
+      <h3 class="he5">Patvirtinkite užsakymą:</h3>
+  <form id="checkout-forma">
+    <div class="forma">
+    <label for="name">Vardas:</label>
+    <input type="text" id="name" name="name" required><br>
+      
+    <label for="email">El. paštas:</label>
+    <input type="email" id="email" name="email" required><br>
+      
+    <button class="siusti" type="submit">Siųsti</button>
+
+    <script>
+      const form = document.querySelector('form');
+    
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+    
+        const name = document.querySelector('#name').value;
+        const email = document.querySelector('#email').value;
+    
+        if (name !== '' && email !== '') {
+          alert('Jūsų užsakymas patvirtintas, užsakymo numeris bus atsiųstas nurodytu el. paštu.');
+          window.location.reload();
+        }
+      });
+    </script>
+    </div>
+  </form>
+  <div class="lft-bar">
+    <div class="lft-menu">
+      <ul>
+          <li> <a href="#kebabai">Kebabai</a></li>
+          <li> <a href="#uzkandziai">Užkandžiai</a> </li>
+          <li> <a href="#pdazai">Padažai</a> </li>
+          <li> <a href="#gerimai">Gėrimai</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+            
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+
+      <div class="card">
+        <a id="kebabai"><img src="static/images/Kebabai/kebabas.png" alt="kebabas"></a>
+        <div class="info">
+          <a><p><strong>Kebabas aštrus</strong></p></a>
+            <div class="desc"> <b>Sudėtis:</b> Vištiena, lavašas, pomidorai, kopūstai, svogūnas, jalopenai, aštrus padažas</div>
+          <a><p>5 €</p></a>
+          <button class="krepseli" onclick="addToCart('Kebabas aštrus', 5)">+</button>
+        </div>
+      </div>
+      <div class="card">
+        <a><img src="static/images/Kebabai/kebabas.png" alt="kebabas"></a>
+        <div class="info">
+          <a><p><strong>Kebabas pikantiškas</strong></p></a>
+            <div class="desc"> <b>Sudėtis:</b> Vištiena, lavašas, pomidorai, kopūstai, svogūnas, pikantiškas padažas</div>
+          <a><p>5 €</p></a>
+          <button class="krepseli" onclick="addToCart('Kebabas pikantiškas', 5)">+</button>
+        </div>
+      </div>
+      <div class="card">
+        <a><img src="static/images/Kebabai/kebabas.png" alt="kebabas"></a>
+        <div class="info">
+          <a><p><strong>Kebabas česnakinis</strong></p></a>
+            <div class="desc"> <b>Sudėtis:</b> Vištiena, lavašas, pomidorai, kopūstai, svogūnas, česnakinis padažas</div>
+          <a><p>5 €</p></a>
+          <button class="krepseli" onclick="addToCart('Kebabas česnakinis', 5)">+</button>
+        </div>
+      </div>
+      <div class="card">
+        <a><img src="static/images/Kebabai/kebabas.png" alt="kebabas"></a>
+        <div class="info">
+          <a><p><strong>Kebabas mix</strong></p></a>
+            <div class="desc"> <b>Sudėtis:</b> Vištiena, lavašas, pomidorai, kopūstai, svogūnas, egzotiniai prieskoniai, mix padažas</div>
+          <a><p>5 €</p></a>
+          <button class="krepseli" onclick="addToCart('Kebabas mix', 5)">+</button>
+        </div>
+      </div>
+
+
+        <div class="card">
+          <a><img src="static/images/Kebabai/kebaspita.png" alt="kebabas"></a>
+          <div class="info">
+            <a><p><strong>Pita aštrus</strong></p></a>
+              <div class="desc"> <b>Sudėtis:</b> Vištiena, pita, pomidorai, kopūstai, svogūnas, jalopenai, aštrus padažas</div>
+            <a><p>6 €</p></a>
+            <button class="krepseli" onclick="addToCart('Pita aštrus', 6)">+</button>
+          </div>
+        </div>
+        <div class="card">
+          <a><img src="static/images/Kebabai/kebaspita.png" alt="kebabas"></a>
+          <div class="info">
+            <a><p><strong>Pita pikantiškas</strong></p></a>
+              <div class="desc"> <b>Sudėtis:</b> Vištiena, pita, pomidorai, kopūstai, svogūnas, pikantiškas padažas</div>
+            <a><p>6 €</p></a>
+            <button class="krepseli" onclick="addToCart('Pita pikantiškas', 6)">+</button>
+          </div>
+        </div>
+        <div class="card">
+          <a><img src="static/images/Kebabai/kebaspita.png" alt="kebabas"></a>
+          <div class="info">
+            <a><p><strong>Pita česnakinis</strong></p></a>
+              <div class="desc"> <b>Sudėtis:</b> Vištiena, pita, pomidorai, kopūstai, svogūnas, česnakinis padažas</div>
+            <a><p>6 €</p></a>
+            <button class="krepseli" onclick="addToCart('Pita česnakinis', 6)">+</button>
+          </div>
+        </div>
+        <div class="card">
+          <a><img src="static/images/Kebabai/kebaspita.png" alt="kebabas"></a>
+          <div class="info">
+            <a><p><strong>Pita mix</strong></p></a>
+              <div class="desc"> <b>Sudėtis:</b> Vištiena, pita, pomidorai, kopūstai, svogūnas, egzotiniai prieskoniai, mix padažas</div>
+            <a><p>6 €</p></a>
+            <button class="krepseli" onclick="addToCart('Pita mix', 6)">+</button>
+          </div>
+        </div>
+        <div class="card">
+        <a id="uzkandziai"><img src="static/images/Kebabai/svogunu žiedai.png" alt="Svogūnai"></a>
+        <div class="info">
+          <a ><p><strong>Svogūnų žiedai</strong></p></a>
+            <div class="desc"> <b>Sudėtis:</b> Svogūnai, kepimo pagrindas</div>
+          <a><p>3 €</p></a>
+          <button class="krepseli" onclick="addToCart('Svogūnų žiedai', 3)">+</button>
+        </div>
+      </div>
+      <div class="card">
+        <a><img src="static/images/Kebabai/kepti koldunai.png" alt="koldūnai"></a>
+        <div class="info">
+          <a><p><strong>Kepti koldūnai</strong></p></a>
+            <div class="desc"> <b>Sudėtis:</b> Koldūnai su mėsos įdaru</div>
+          <a><p>4 €</p></a>
+          <button class="krepseli" onclick="addToCart('Kepti koldūnai', 4)">+</button>
+        </div>
+      </div>
+      <div class="card">
+        <a><img src="static/images/Kebabai/kebabo mesa.png" alt="mėsa"></a>
+        <div class="info">
+          <a><p><strong>Kebabo mėsa</strong></p></a>
+            <div class="desc"> <b>Sudėtis:</b> Vištienos mėsa kepta ant grilio</div>
+          <a><p>3 €</p></a>
+          <button class="krepseli" onclick="addToCart('Kebabo mėsa', 3)">+</button>
+        </div>
+      </div>
+      <div class="card">
+        <a><img src="static/images/Kebabai/suris.png" alt="Sūris"></a>
+        <div class="info">
+          <a><p><strong>Sūris-brandintas</strong></p></a>
+            <div class="desc"> <b>Sudėtis:</b> Givulinės kilmės sūris</div>
+          <a><p>1 €</p></a>
+          <button class="krepseli" onclick="addToCart('Sūris-brandintas', 1)">+</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <a id="pdazai"><img src="static/images/Kebabai/padažas aštrus.png" alt="padažas"></a>
+        <div class="info">
+          <a><p><strong>Aštrus padažas</strong></p></a>
+          <a><p>1 €</p></a>
+          <button class="krepseli" onclick="addToCart('Aštrus padažas', 1)">+</button>
+        </div>
+      </div>
+      <div class="card">
+        <a><img src="static/images/Kebabai/padazas pikantiskas.png" alt="padažas"></a>
+        <div class="info">
+          <a><p><strong>Pikantiškas padažas</strong></p></a>
+          <a><p>1 €</p></a>
+          <button class="krepseli" onclick="addToCart('Pikantiškas padažas', 1)">+</button>
+        </div>
+      </div>
+      <div class="card">
+        <a><img src="static/images/Kebabai/cesnakinis.png" alt="padažas"></a>
+        <div class="info">
+          <a><p><strong>Česnakinis padažas</strong></p></a>
+          <a><p>1 €</p></a>
+          <button class="krepseli" onclick="addToCart('Česnakinis padažas', 1)">+</button>
+        </div>
+      </div>
+      <div class="card">
+        <a><img src="static/images/Kebabai/mixas.png" alt="padažas"></a>
+        <div class="info">
+          <a><p><strong>Mix padažas</strong></p></a>
+          <a><p>1 €</p></a>
+          <button class="krepseli" onclick="addToCart('Mix padažas', 1)">+</button>
+        </div>
+      </div>
+      <div class="card">
+        <a><img src="static/images/Kebabai/fanta.png" alt="gėrimas"></a>
+        <div class="info">
+          <a id="gerimai"><p><strong>Fanta 0,33</strong></p></a>
+          <a><p>1 €</p></a>
+          <button class="krepseli" onclick="addToCart('Fanta 0,33', 1)">+</button>
+        </div>
+      </div>
+      
+      <div class="card">
+        <a><img src="static/images/Kebabai/cola.png" alt="gėrimas"></a>
+        <div class="info">
+          <a><p><strong>Coca-cola 0,33</strong></p></a>
+          <a><p>1 €</p></a>
+          <button class="krepseli" onclick="addToCart('Coca-cola 0,33', 1)">+</button>
+        </div>
+      </div>
+      <div class="card">
+        <a><img src="static/images/Kebabai/sprite.png" alt="gėrimas"></a>
+        <div class="info">
+          <a><p><strong>Sprite 0,33</strong></p></a>
+          <a><p>1 €</p></a>
+          <button class="krepseli" onclick="addToCart('Sprite 0,33', 1)">+</button>
+        </div>
+      </div>
+      <div class="card">
+        <a><img src="static/images/Kebabai/kava.jpg" alt="gėrimas"></a>
+        <div class="info">
+          <a><p><strong>Kava 0,25</strong></p></a>
+          <a><p>1 €</p></a>
+          <button class="krepseli" onclick="addToCart('Kava o,25', 1)">+</button>
+        </div>
+      </div>
+      <div class="card">
+        <a><img src="static/images/Kebabai/arbata.jpg" alt="gėrimas"></a>
+        <div class="info">
+          <a><p><strong>Arbata 0,25</strong></p></a>
+          <a><p>1 €</p></a>
+          <button class="krepseli" onclick="addToCart('Arbata 0,25', 1)">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button id="arrowButton" onclick="scrollToTop()">&#8593;</button>
+  <script>window.onscroll = function() { showArrowButton() };
+
+    function showArrowButton() {
+      var arrowButton = document.getElementById("arrowButton");
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        arrowButton.classList.add("show");
+      } else {
+        arrowButton.classList.remove("show");
+      }
+    }
+    
+    function scrollToTop() {
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2023 1771 Kebabai</p>
+      <nav>
+        <ul>
+          <li><a href="index.html">Meniu</a></li>
+          <li><a href="static/Apie.html">Apie mus</a></li>
+          <li><a href="static/krepselis.html">Kontaktai</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+
+</html>

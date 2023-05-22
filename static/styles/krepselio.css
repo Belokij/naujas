@@ -1,0 +1,29 @@
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  
+}
+.viso {
+  padding-top: 35px;
+  text-align: center;
+  
+}
+
+
+
+
+#checkout-btn {
+  display: block;
+  margin: 40px auto 0;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #008CBA;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}

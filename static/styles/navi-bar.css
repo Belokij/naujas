@@ -1,0 +1,104 @@
+.navi-bar {
+    width: 100%;
+    display: flex;
+    background-color: #8B0000;
+    font-size: 20px;
+}
+
+.navi-list {
+    font-weight: bolder;
+    display: flex;
+    font-size: 30px;
+
+}
+
+.navi-list a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    color: rgb(233, 233, 233);
+}
+
+.navi-list a:hover {
+    background-color: #ba0e0e;
+}
+
+.navi-btn {
+    display: none;
+}
+
+
+
+@media (max-width: 900px) {
+    .navi-btn {
+        font-size: 2em;
+        padding-inline: 10px;
+        padding-bottom: 3px;
+        border: none;
+        color: white;
+        background-color: #8B0000;
+        display: block;
+        cursor: pointer;
+    }
+    
+    .navi-list {
+        text-align: center;
+        display: none;
+    }
+
+    .navi-btn:hover{
+        background-color: #ba0e0e;
+    }
+    .drop:hover .navi-list{
+        display: block;
+        position: absolute;
+        right: 0px;
+        background-color: #8B0000;
+    }
+    .navi-bar{
+        justify-content: space-between;
+    }
+}
+
+  .krepseli {
+    height: 45px;
+    width: 45px;
+    margin-top: auto;
+    background-color: #d8ca0c;
+    padding-top: 7px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 17px;
+    justify-content: center;
+    text-align: center;
+    font-size: 35px;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; 
+    display: flex;
+    border: none;
+  }
+  
+  .krepseli:hover {
+    background-color: #ddaf08;
+  }
+
+  #arrowButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px; 
+    width: 40px;
+    height: 40px;
+    background-color: #444444;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  
+  #arrowButton.show {
+    display: block;
+  }
+  
